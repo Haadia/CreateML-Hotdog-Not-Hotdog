@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="irA-ZB-Dxc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="NzJ-4w-XKV">
+            <objects>
+                <viewController id="irA-ZB-Dxc" customClass="ViewController" customModule="Hotdog_Not_Hotdog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jWG-sT-17e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lBm-y0-71K">
+                                <rect key="frame" x="67" y="199.5" width="241" height="268"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="268" id="EXv-oc-tmN"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62t-iD-qtk">
+                                <rect key="frame" x="67" y="581" width="241" height="38"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="Q80-oT-GPw"/>
+                                </constraints>
+                                <state key="normal" title="Take Image">
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraPressed:" destination="irA-ZB-Dxc" eventType="touchUpInside" id="OF7-wU-7vL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotdog?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKg-zh-6dK">
+                                <rect key="frame" x="67" y="68" width="241" height="45"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lBm-y0-71K" firstAttribute="top" secondItem="YKg-zh-6dK" secondAttribute="bottom" constant="87" id="3F4-lE-BdI"/>
+                            <constraint firstItem="YKg-zh-6dK" firstAttribute="leading" secondItem="Mlh-Jz-4cJ" secondAttribute="leading" constant="67" id="8bb-hi-kFn"/>
+                            <constraint firstItem="Mlh-Jz-4cJ" firstAttribute="bottom" secondItem="62t-iD-qtk" secondAttribute="bottom" constant="48" id="AjA-I0-zJ7"/>
+                            <constraint firstItem="lBm-y0-71K" firstAttribute="centerY" secondItem="jWG-sT-17e" secondAttribute="centerY" id="FMR-NB-CKY"/>
+                            <constraint firstItem="YKg-zh-6dK" firstAttribute="leading" secondItem="lBm-y0-71K" secondAttribute="leading" id="FnI-EK-4sZ"/>
+                            <constraint firstItem="lBm-y0-71K" firstAttribute="leading" secondItem="62t-iD-qtk" secondAttribute="leading" id="RDf-Kp-lLz"/>
+                            <constraint firstItem="YKg-zh-6dK" firstAttribute="trailing" secondItem="lBm-y0-71K" secondAttribute="trailing" id="dwV-e6-l7Z"/>
+                            <constraint firstItem="YKg-zh-6dK" firstAttribute="top" secondItem="Mlh-Jz-4cJ" secondAttribute="top" constant="48" id="hbo-q2-asE"/>
+                            <constraint firstItem="lBm-y0-71K" firstAttribute="trailing" secondItem="62t-iD-qtk" secondAttribute="trailing" id="niM-7g-QJi"/>
+                            <constraint firstItem="YKg-zh-6dK" firstAttribute="centerX" secondItem="jWG-sT-17e" secondAttribute="centerX" id="niN-ue-oMX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mlh-Jz-4cJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="hotdogLabel" destination="YKg-zh-6dK" id="MUa-Xc-VL5"/>
+                        <outlet property="imageView" destination="lBm-y0-71K" id="aLd-5Q-iXi"/>
+                        <outlet property="takeImageButton" destination="62t-iD-qtk" id="DbV-Wy-4Cq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KID-3l-NWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968.79999999999995" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
